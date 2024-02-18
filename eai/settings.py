@@ -97,14 +97,15 @@ WSGI_APPLICATION = 'eai.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'eaidb',
-        'USER': 'root',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '3306'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'lumbadb',
+        'HOST': '35.219.110.88',  # Set to the database host, e.g., 'localhost' or '127.0.0.1'
+        'PORT': '5432',  # Set to the database port, default is '5432' for PostgreSQL
     }
 }
+
 
 
 # Password validation
