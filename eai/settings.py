@@ -100,8 +100,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': 'lumbadb',
-        'HOST': '35.219.110.88',  # Set to the database host, e.g., 'localhost' or '127.0.0.1'
+        'PASSWORD': 'aSTIoneiRDiR',
+        'HOST': '34.101.228.98',  # Set to the database host, e.g., 'localhost' or '127.0.0.1'
         'PORT': '5432',  # Set to the database port, default is '5432' for PostgreSQL
     }
 }

@@ -25,7 +25,7 @@ def initiate_modeling(request):
         return Response({'message': "input error"},status=status.HTTP_400_BAD_REQUEST)
     
     # setup request to training service endpoint
-    training_service_url = 'http://10.128.0.6:7000/train/'
+    training_service_url = 'http://127.0.0.1:7000/train/'
     current_path = os.getcwd()
     file_path = f'{current_path}/directory/{username}/{workspace}/{file_name}'
     files = {'file': open(file_path, 'rb')}
