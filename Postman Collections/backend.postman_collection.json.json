@@ -578,7 +578,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Model Copy",
+					"name": "Update Model",
 					"id": "0226ace0-2b20-4ba6-9166-a2cf92d21ae3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -590,18 +590,25 @@
 							"mode": "formdata",
 							"formdata": [
 								{
+									"key": "status",
+									"value": "in progress",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/modeling/?modelname=affairs.csv&workspace={{workspace_name}}&username={{username}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"modeling",
+								""
+							],
+							"query": [
+								{
 									"key": "modelname",
-									"value": "affairs",
-									"type": "text"
-								},
-								{
-									"key": "filename",
 									"value": "affairs.csv",
-									"type": "text"
-								},
-								{
-									"key": "username",
-									"value": "{{username}}",
 									"type": "text"
 								},
 								{
@@ -610,28 +617,12 @@
 									"type": "text"
 								},
 								{
-									"key": "method",
-									"value": "REGRESSION",
-									"type": "text"
-								},
-								{
-									"key": "algorithm",
-									"value": "LINEAR",
-									"type": "text"
-								},
-								{
-									"key": "feature",
-									"value": "rate_marriage,age,yrs_married,children,religious,educ,occupation,occupation_husb",
-									"type": "text"
-								},
-								{
-									"key": "target",
-									"value": "affairs",
+									"key": "username",
+									"value": "{{username}}",
 									"type": "text"
 								}
 							]
-						},
-						"url": "{{base_url}}/modeling/"
+						}
 					},
 					"response": []
 				},
@@ -645,41 +636,6 @@
 						"method": "GET",
 						"header": [],
 						"url": "{{base_url}}/modeling/listmodel/"
-					},
-					"response": []
-				},
-				{
-					"name": "Test Model",
-					"id": "11a3689d-0f7b-4468-bc08-b0bc2a9b7360",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/modeling/predict/?modelname=affairs&feature",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"modeling",
-								"predict",
-								""
-							],
-							"query": [
-								{
-									"key": "modelname",
-									"value": "affairs",
-									"type": "text"
-								},
-								{
-									"key": "feature",
-									"value": null,
-									"type": "text"
-								}
-							]
-						}
 					},
 					"response": []
 				},
@@ -715,6 +671,41 @@
 								{
 									"key": "username",
 									"value": "{{username}}",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Model",
+					"id": "11a3689d-0f7b-4468-bc08-b0bc2a9b7360",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/modeling/predict/?modelname=affairs&feature",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"modeling",
+								"predict",
+								""
+							],
+							"query": [
+								{
+									"key": "modelname",
+									"value": "affairs",
+									"type": "text"
+								},
+								{
+									"key": "feature",
+									"value": null,
 									"type": "text"
 								}
 							]
