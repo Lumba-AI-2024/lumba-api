@@ -684,7 +684,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Training Record",
+					"name": "Get Model Detail",
 					"id": "2e016385-f8ee-4d7c-a9f7-357d8298e8f6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -693,19 +693,28 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/modeling/getrecord/?id=2",
+							"raw": "{{base_url}}/modeling/?modelname=affairs.csv&workspace={{workspace_name}}&username={{username}}",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"modeling",
-								"getrecord",
 								""
 							],
 							"query": [
 								{
-									"key": "id",
-									"value": "2",
+									"key": "modelname",
+									"value": "affairs.csv",
+									"type": "text"
+								},
+								{
+									"key": "workspace",
+									"value": "{{workspace_name}}",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
 									"type": "text"
 								}
 							]
