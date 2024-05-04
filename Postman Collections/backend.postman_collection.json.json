@@ -194,6 +194,10 @@
 									"key": "file",
 									"description": "Uploaded CSV File",
 									"type": "file",
+									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+									"filesNotInWorkingDirectory": [
+										"/C:/Users/Bhisma/Desktop/Skripsi/lumba-ai/lumba-preprocess/directory/gbhisma/ws1/affairs.csv"
+									],
 									"src": "/C:/Users/Bhisma/Desktop/Skripsi/lumba-ai/lumba-preprocess/directory/gbhisma/ws1/affairs.csv"
 								},
 								{
@@ -312,13 +316,13 @@
 							"formdata": [
 								{
 									"key": "newfilename",
-									"value": "{{filename_temp}}",
+									"value": "affairs.csv",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{base_url}}/file/?oldfilename=test.csv&username={{username}}&workspace={{workspace_name}}",
+							"raw": "{{base_url}}/file/?oldfilename={{filename_temp}}&username={{username}}&workspace={{workspace_name}}",
 							"host": [
 								"{{base_url}}"
 							],
@@ -329,7 +333,7 @@
 							"query": [
 								{
 									"key": "oldfilename",
-									"value": "test.csv"
+									"value": "{{filename_temp}}"
 								},
 								{
 									"key": "username",
@@ -729,12 +733,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://{{base_url}}/null?username={{username}}&workspace={{workspace}}&filename={{filename}}",
-							"protocol": "http",
+							"raw": "{{base_url}}/preprocess/null?username={{username}}&workspace={{workspace_name}}&filename={{filename}}",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
+								"preprocess",
 								"null"
 							],
 							"query": [
@@ -744,7 +748,7 @@
 								},
 								{
 									"key": "workspace",
-									"value": "{{workspace}}"
+									"value": "{{workspace_name}}"
 								},
 								{
 									"key": "filename",
@@ -822,12 +826,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://{{base_url}}/outlier?username={{username}}&workspace={{workspace}}&filename={{filename}}",
-							"protocol": "http",
+							"raw": "{{base_url}}/preprocess/outlier?username={{username}}&workspace={{workspace_name}}&filename={{filename}}",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
+								"preprocess",
 								"outlier"
 							],
 							"query": [
@@ -837,7 +841,7 @@
 								},
 								{
 									"key": "workspace",
-									"value": "{{workspace}}"
+									"value": "{{workspace_name}}"
 								},
 								{
 									"key": "filename",
@@ -858,13 +862,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://{{base_url}}/null?username={{username}}&workspace={{workspace}}&filename={{filename}}",
-							"protocol": "http",
+							"raw": "{{base_url}}/preprocess/boxplot?username={{username}}&workspace={{workspace_name}}&filename={{filename}}",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
-								"null"
+								"preprocess",
+								"boxplot"
 							],
 							"query": [
 								{
@@ -873,7 +877,7 @@
 								},
 								{
 									"key": "workspace",
-									"value": "{{workspace}}"
+									"value": "{{workspace_name}}"
 								},
 								{
 									"key": "filename",
