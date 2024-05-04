@@ -715,6 +715,177 @@
 				}
 			],
 			"id": "51752710-e0ac-4668-b1a6-24dd3663156a"
+		},
+		{
+			"name": "Preprocess",
+			"item": [
+				{
+					"name": "Null Check Copy",
+					"id": "a4b0f582-2628-458a-a8f0-bebfc51fd9ef",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}/null?username={{username}}&workspace={{workspace}}&filename={{filename}}",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"null"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "{{username}}"
+								},
+								{
+									"key": "workspace",
+									"value": "{{workspace}}"
+								},
+								{
+									"key": "filename",
+									"value": "{{filename}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Master Handler Copy",
+					"id": "acbd44e2-6629-4268-ac18-bf842642024e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}/preprocess/handle?username={{username}}&workspace={{workspace}}&filename={{filename}}&columns_encoding=doors,persons&encoding=1&columns_ordinal_encoding=buying,meant,lug_boot,safety,class&ranks_ordinal_encoding=vhigh,high,med,low,vhigh,high,med,low,small,med,big;low,med,high,unacc,acc,vgood,good&ordinal_encoding=1",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"preprocess",
+								"handle"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "{{username}}"
+								},
+								{
+									"key": "workspace",
+									"value": "{{workspace}}"
+								},
+								{
+									"key": "filename",
+									"value": "{{filename}}"
+								},
+								{
+									"key": "columns_encoding",
+									"value": "doors,persons"
+								},
+								{
+									"key": "encoding",
+									"value": "1"
+								},
+								{
+									"key": "columns_ordinal_encoding",
+									"value": "buying,meant,lug_boot,safety,class"
+								},
+								{
+									"key": "ranks_ordinal_encoding",
+									"value": "vhigh,high,med,low,vhigh,high,med,low,small,med,big;low,med,high,unacc,acc,vgood,good"
+								},
+								{
+									"key": "ordinal_encoding",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Outlier Handler Copy",
+					"id": "ab98320f-253f-4634-989c-9c2da92b8897",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}/outlier?username={{username}}&workspace={{workspace}}&filename={{filename}}",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"outlier"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "{{username}}"
+								},
+								{
+									"key": "workspace",
+									"value": "{{workspace}}"
+								},
+								{
+									"key": "filename",
+									"value": "{{filename}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BoxPlot Handler Copy",
+					"id": "3e97e306-49ea-439c-b8e1-df73a5b0e7da",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}/null?username={{username}}&workspace={{workspace}}&filename={{filename}}",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"null"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "{{username}}"
+								},
+								{
+									"key": "workspace",
+									"value": "{{workspace}}"
+								},
+								{
+									"key": "filename",
+									"value": "{{filename}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "466b5f66-9869-443c-b0d6-14e5b8e01ac8"
 		}
 	],
 	"event": [
