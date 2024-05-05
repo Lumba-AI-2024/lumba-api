@@ -705,6 +705,39 @@
 					"response": []
 				},
 				{
+					"name": "Delete Model",
+					"id": "5f67222c-afd4-4f3c-818a-1521f98943a7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "modelname",
+									"value": "affairs.csv",
+									"type": "text"
+								},
+								{
+									"key": "workspace",
+									"value": "{{workspace_name}}",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/modeling/"
+					},
+					"response": []
+				},
+				{
 					"name": "Test Model",
 					"id": "11a3689d-0f7b-4468-bc08-b0bc2a9b7360",
 					"protocolProfileBehavior": {
