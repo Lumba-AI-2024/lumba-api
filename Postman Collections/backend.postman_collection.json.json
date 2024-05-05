@@ -536,7 +536,7 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "name",
+									"key": "modelname",
 									"value": "affairs",
 									"type": "text"
 								},
@@ -639,7 +639,29 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/modeling/listmodel/"
+						"url": {
+							"raw": "{{base_url}}/modeling/list/?workspace={{workspace_name}}&username={{username}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"modeling",
+								"list",
+								""
+							],
+							"query": [
+								{
+									"key": "workspace",
+									"value": "{{workspace_name}}",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								}
+							]
+						}
 					},
 					"response": []
 				},
