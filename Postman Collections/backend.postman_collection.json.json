@@ -952,6 +952,24 @@
 				}
 			],
 			"id": "466b5f66-9869-443c-b0d6-14e5b8e01ac8"
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "85333087-5f98-4919-8e23-859c4cde01c9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "a738b762-19fe-415e-a90f-cb26cbe3b323"
 		}
 	],
 	"event": [
