@@ -958,7 +958,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "7fa2b062-df1f-4549-9d67-6544a233f85a",
+				"id": "7a39997e-c9cb-471b-8f9c-89c85f70f2be",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -969,7 +969,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "94bc31ac-7f8e-4a13-8454-33541d43ffe6",
+				"id": "fe2c1810-62b4-45a6-ab6e-7b17b764fd24",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -985,7 +985,7 @@
 		},
 		{
 			"key": "workspace_name",
-			"value": "ws110"
+			"value": "ws10"
 		},
 		{
 			"key": "username",
