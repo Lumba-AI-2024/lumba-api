@@ -1016,6 +1016,10 @@
 		{
 			"key": "filename_temp",
 			"value": "test.csv"
+		},
+		{
+			"key": "workspace_type",
+			"value": "predicting"
 		}
 	]
 }
